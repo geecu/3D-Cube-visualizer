@@ -22,7 +22,8 @@ CanvasVisualizer.prototype.update = function(data) {
 };
 
 CanvasVisualizer.prototype.render = function(data) {
-    var data = data || [1], n, val;
+    var n, val;
+    data = data || [];
     if (this.canvasContext) {
         this.canvasContext.clearRect(0, 0, this.drawWidth, this.drawHeight);
         n = data.length;
@@ -34,6 +35,6 @@ CanvasVisualizer.prototype.render = function(data) {
     } else {
         //Should do something here
     }
-}
+};
 
 module.exports = CanvasVisualizer;
