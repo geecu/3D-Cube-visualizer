@@ -1,0 +1,53 @@
+/* ==========================================================================
+   App Stylesheet
+   app.less
+   ========================================================================== */
+
+
+/* Vendor Styles and Setting (bootstrao > variables)
+   ======================================================================== */
+@import "bootstrap.less";
+
+
+/* Mixins (User defined mixins)
+   ======================================================================== */
+
+
+/* Components
+   ======================================================================== */
+@import "components/base.less";
+
+body {
+   background-color: #000;
+}
+
+.bar {
+   border: 1px solid red;
+   height: 4px;
+   margin-bottom: 2px;
+   width: 100px;
+}
+
+.visualizer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+//   width: 150px;
+//   height: 150px;
+}
+
+.audio-controls {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   padding: 10px;
+   > * {
+      display: inline-block;
+   }
+
+   .volume {
+      width: 100px;
+   }
+}
