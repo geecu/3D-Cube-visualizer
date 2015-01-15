@@ -14,7 +14,7 @@ CanvasVisualizer.prototype.initCanvasContext = function(width, height) {
     this.drawWidth = width;
     this.drawHeight = height;
     this.canvasContext.clearRect(0, 0, this.drawWidth, this.drawHeight);
-    this.canvasContext.fillStyle = 'rgba(' + parseInt(Math.random() * 255, 10) + ',' + parseInt(Math.random() * 255, 10) + ',' + parseInt(Math.random() * 255, 10) + ',1)';
+    this.canvasContext.fillStyle = 'rgba(0, 255, 0, 1)';
 };
 
 CanvasVisualizer.prototype.update = function(data) {
