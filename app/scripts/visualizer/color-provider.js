@@ -12,7 +12,6 @@ ColorProvider.prototype._createVirtualCanvas = function(width, height) {
     canvas = document.createElement('canvas');
     canvas.setAttribute('width', width);
     canvas.setAttribute('height', height);
-    document.querySelector('body').appendChild(canvas);
     return canvas;
 };
 
