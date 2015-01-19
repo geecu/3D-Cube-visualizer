@@ -14,11 +14,12 @@ var audio,
 /* Wire the processor into our audio context. */
 processor.connect(context.destination);
 /* Wire the analyser into the processor */
-analyser.size = size;
+analyser.fftSize = size;
 analyser.connect(processor);
 
 /* Define a Uint8Array to receive the analysers data. */
-var data = new Uint8Array(size);
+//var data = new Uint8Array(size);
+var data = new Uint8Array(analyser.frequencyBinCount);
 
 /* Define a `Sound` Class */
 var Sound = {
@@ -42,7 +43,7 @@ var Sound = {
 
     processor.onaudioprocess = function() {
       /* Populate the data array with the frequency data. */
-      analyser.getByteTimeDomainData(data);
+      analyser.getByteFrequencyData(data);
       visualizer.update(data);
       /*
       for (var i = 0; i < size; i++) {
